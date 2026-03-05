@@ -19,7 +19,7 @@ http.createServer((req, resp) => {
             req.on('data', (chunk) => {
                 dataBody.push(chunk);
 
-            })
+            });
             req.on('end', () => {
                 let rawData = Buffer.concat(dataBody).toString();
                 let readableData = queryString.parse(rawData);
